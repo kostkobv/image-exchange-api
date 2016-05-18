@@ -1,6 +1,7 @@
-'use strict';
-
 const express = require('express');
+const bodyParser = require('body-parser');
+
+const register = require('./register');
 
 /**
  * Inits the express server for app
@@ -8,11 +9,19 @@ const express = require('express');
 function init() {
   let app = express();
 
-  app.get('/', (req, res) => {
-    res.send('works');
+  app.use(bodyParser.json());
+
+  app.post('/register', (req, res) => {
+    register(req.body)
+      .then((user) => {
+        res.status(200).send(user);
+      })
+      .catch((err) => {
+        res.status(400).send(err);
+      });
   });
 
-  app.listen(3000);
+  return app.listen(3000);
 }
 
 module.exports = {

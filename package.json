@@ -4,12 +4,12 @@
   "description": "Training API for image exchange",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/tape/bin/tape ./tests/**/*.js",
-    "lint": "./node_modules/eslint/bin/eslint.js ./app/**/*.js",
-    "develop": "./node_modules/watch/cli.js --wait=2 'npm run test && npm run lint' ."
+    "test": "./node_modules/.bin/tape ./tests/**/*.js",
+    "lint": "./node_modules/.bin/eslint ./app/**/*.js",
+    "develop": "./node_modules/.bin/watch --wait=2 'npm run test && npm run lint' ."
   },
-  "engines" : {
-    "node" : ">=6.0.0"
+  "engines": {
+    "node": ">=6.0.0"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,15 @@
   },
   "homepage": "https://github.com/kostkobv/image-exchange-api#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "redis": "^2.6.0-2"
   },
   "devDependencies": {
     "eslint": "^2.10.2",
+    "faucet": "0.0.1",
+    "supertest": "^1.2.0",
     "tape": "^4.5.1",
     "watch": "^0.18.0"
   }
