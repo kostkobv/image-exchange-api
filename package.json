@@ -8,6 +8,9 @@
     "lint": "./node_modules/eslint/bin/eslint.js ./app/**/*.js",
     "develop": "./node_modules/watch/cli.js --wait=2 'npm run test && npm run lint' ."
   },
+  "engines" : {
+    "node" : ">=6.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kostkobv/image-exchange-api.git"
