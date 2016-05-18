@@ -1,0 +1,29 @@
+{
+  "name": "image-exchange-api",
+  "version": "1.0.0",
+  "description": "Training API for image exchange",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/tape/bin/tape ./tests/**/*.js",
+    "lint": "./node_modules/eslint/bin/eslint.js ./app/**/*.js",
+    "develop": "./node_modules/watch/cli.js --wait=2 'npm run test && npm run lint' ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kostkobv/image-exchange-api.git"
+  },
+  "author": "Bohdan Kostko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kostkobv/image-exchange-api/issues"
+  },
+  "homepage": "https://github.com/kostkobv/image-exchange-api#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "eslint": "^2.10.2",
+    "tape": "^4.5.1",
+    "watch": "^0.18.0"
+  }
+}
